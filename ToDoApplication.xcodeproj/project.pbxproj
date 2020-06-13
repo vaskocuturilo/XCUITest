@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		72E7BE69249502180064C64E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E7BE67249502180064C64E /* Main.storyboard */; };
 		72E7BE6B249502190064C64E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72E7BE6A249502190064C64E /* Assets.xcassets */; };
 		72E7BE6E249502190064C64E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72E7BE6C249502190064C64E /* LaunchScreen.storyboard */; };
+		72E7BE7624950FBC0064C64E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE7524950FBC0064C64E /* EditViewController.swift */; };
+		72E7BE7824950FF70064C64E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE7724950FF70064C64E /* TaskViewController.swift */; };
 		B45EF943BA0A310A08CBD58B /* Pods_ToDoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48020F67C8C6D114DFCEFFB /* Pods_ToDoApplication.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		72E7BE6A249502190064C64E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72E7BE6D249502190064C64E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72E7BE6F249502190064C64E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72E7BE7524950FBC0064C64E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		72E7BE7724950FF70064C64E /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		9BE10FA04F5C9C7BF760B5A8 /* Pods-ToDoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApplication.debug.xcconfig"; path = "Target Support Files/Pods-ToDoApplication/Pods-ToDoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		E48020F67C8C6D114DFCEFFB /* Pods_ToDoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F678B3547FAAA63AB8062AFA /* Pods-ToDoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoApplication.release.xcconfig"; path = "Target Support Files/Pods-ToDoApplication/Pods-ToDoApplication.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 				9BE10FA04F5C9C7BF760B5A8 /* Pods-ToDoApplication.debug.xcconfig */,
 				F678B3547FAAA63AB8062AFA /* Pods-ToDoApplication.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +91,8 @@
 				72E7BE6A249502190064C64E /* Assets.xcassets */,
 				72E7BE6C249502190064C64E /* LaunchScreen.storyboard */,
 				72E7BE6F249502190064C64E /* Info.plist */,
+				72E7BE7524950FBC0064C64E /* EditViewController.swift */,
+				72E7BE7724950FF70064C64E /* TaskViewController.swift */,
 			);
 			path = ToDoApplication;
 			sourceTree = "<group>";
@@ -207,7 +212,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E7BE7624950FBC0064C64E /* EditViewController.swift in Sources */,
 				72E7BE66249502180064C64E /* ViewController.swift in Sources */,
+				72E7BE7824950FF70064C64E /* TaskViewController.swift in Sources */,
 				72E7BE62249502180064C64E /* AppDelegate.swift in Sources */,
 				72E7BE64249502180064C64E /* SceneDelegate.swift in Sources */,
 			);
