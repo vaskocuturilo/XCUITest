@@ -43,13 +43,30 @@ class EditViewController: UIViewController {
                     return
                 }
         
-                realm.beginWrite()
         
-                realm.delete(myItem)
-                try! realm.commitWrite()
+        let refreshAlert = UIAlertController(title: "Confirm", message: "Are you sure you want to delete this?", preferredStyle: UIAlertController.Style.alert)
+
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+         
+            self.realm.beginWrite()
+            
+            self.realm.delete(myItem)
+            try! self.realm.commitWrite()
+            
+            self.deletionHandler?()
+            self.navigationController?.popToRootViewController(animated: true)
+            
+          }))
+
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+          
+          }))
+
+        present(refreshAlert, animated: true, completion: nil)
         
-                deletionHandler?()
-                navigationController?.popToRootViewController(animated: true)
+        
+        
+                
         
         }
 }
