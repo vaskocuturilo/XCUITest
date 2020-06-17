@@ -26,6 +26,14 @@ class ToDoTestCase: XCTestCase {
         return 15
     }
     
+    override func setUp(){
+        launch()
+    }
+    
+    override func tearDown() {
+        terminate()
+    }
+    
     var application: XCUIApplication {
         return container.application
     }
