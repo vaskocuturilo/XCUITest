@@ -19,13 +19,14 @@ class ToDoTestCase: XCTestCase {
     }
     
     override func setUp() {
+        super.setUp()
         continueAfterFailure = false
         launch()
     }
     
     override func tearDown() {
         terminate()
-        
+        super.tearDown()
     }
     
     func terminate() {
