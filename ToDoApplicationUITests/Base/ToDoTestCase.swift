@@ -18,6 +18,16 @@ class ToDoTestCase: XCTestCase {
         container.application.launch()
     }
     
+    override func setUp() {
+        continueAfterFailure = false
+        launch()
+    }
+    
+    override func tearDown() {
+        terminate()
+        
+    }
+    
     func terminate() {
         container.application.terminate()
     }
