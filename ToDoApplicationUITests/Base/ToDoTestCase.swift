@@ -8,6 +8,8 @@
 
 import XCTest
 
+
+/// Test case class.
 class ToDoTestCase: XCTestCase {
     private let container = ToDoTestCaseDIContainer()
     private let springboardApplication = XCUIApplication(bundleIdentifier: "com.apple.springboard")
@@ -39,6 +41,10 @@ class ToDoTestCase: XCTestCase {
     
     var application: XCUIApplication {
         return container.application
+    }
+    
+    var screens: ToDoScreens {
+        return container.screens
     }
     
     /// Function waitForElementToAppear.
