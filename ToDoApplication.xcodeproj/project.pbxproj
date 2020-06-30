@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720BFA5324A9D18B00691CCD /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720BFA5224A9D18B00691CCD /* Accessibility.swift */; };
 		72158738249517C7007F6D46 /* ToDoTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72158737249517C7007F6D46 /* ToDoTestCase.swift */; };
 		7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7215873924951826007F6D46 /* ToDoTestCaseDIContainer.swift */; };
 		721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721ED97A2497E06200058636 /* CheckPreconditions.swift */; };
+		723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C124A392C600B618C4 /* ToDoScreens.swift */; };
+		723DA5C424A3936400B618C4 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C324A3936400B618C4 /* RootScreen.swift */; };
 		725C827C24953FAB0019B34C /* ToDoPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C827B24953FAB0019B34C /* ToDoPageObject.swift */; };
 		72E7BE62249502180064C64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE61249502180064C64E /* AppDelegate.swift */; };
 		72E7BE64249502180064C64E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE63249502180064C64E /* SceneDelegate.swift */; };
@@ -33,11 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		720BFA5224A9D18B00691CCD /* Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessibility.swift; sourceTree = "<group>"; };
 		721093732495178E007C94AC /* ToDoApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		721093772495178E007C94AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72158737249517C7007F6D46 /* ToDoTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTestCase.swift; sourceTree = "<group>"; };
 		7215873924951826007F6D46 /* ToDoTestCaseDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTestCaseDIContainer.swift; sourceTree = "<group>"; };
 		721ED97A2497E06200058636 /* CheckPreconditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPreconditions.swift; sourceTree = "<group>"; };
+		723DA5C124A392C600B618C4 /* ToDoScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreens.swift; sourceTree = "<group>"; };
+		723DA5C324A3936400B618C4 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		725C827B24953FAB0019B34C /* ToDoPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPageObject.swift; sourceTree = "<group>"; };
 		72E7BE5E249502180064C64E /* ToDoApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72E7BE61249502180064C64E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,9 +96,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		720BFA5124A9D17900691CCD /* Accessability */ = {
+			isa = PBXGroup;
+			children = (
+				720BFA5224A9D18B00691CCD /* Accessibility.swift */,
+			);
+			path = Accessability;
+			sourceTree = "<group>";
+		};
 		721093742495178E007C94AC /* ToDoApplicationUITests */ = {
 			isa = PBXGroup;
 			children = (
+				723DA5C024A3929900B618C4 /* Screens */,
 				72158736249517B4007F6D46 /* Base */,
 				721093772495178E007C94AC /* Info.plist */,
 				721ED97A2497E06200058636 /* CheckPreconditions.swift */,
@@ -108,6 +123,31 @@
 				725C827B24953FAB0019B34C /* ToDoPageObject.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		723DA5C024A3929900B618C4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				723DA5C124A392C600B618C4 /* ToDoScreens.swift */,
+				723DA5C324A3936400B618C4 /* RootScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		723DA5C924A396D400B618C4 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				720BFA5124A9D17900691CCD /* Accessability */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		723DA5CA24A396E700B618C4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				72E7BE65249502180064C64E /* ViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		72E7BE55249502180064C64E = {
@@ -133,9 +173,10 @@
 		72E7BE60249502180064C64E /* ToDoApplication */ = {
 			isa = PBXGroup;
 			children = (
+				723DA5CA24A396E700B618C4 /* view */,
+				723DA5C924A396D400B618C4 /* utils */,
 				72E7BE61249502180064C64E /* AppDelegate.swift */,
 				72E7BE63249502180064C64E /* SceneDelegate.swift */,
-				72E7BE65249502180064C64E /* ViewController.swift */,
 				72E7BE67249502180064C64E /* Main.storyboard */,
 				72E7BE6A249502190064C64E /* Assets.xcassets */,
 				72E7BE6C249502190064C64E /* LaunchScreen.storyboard */,
@@ -295,6 +336,8 @@
 				7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */,
 				721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */,
 				72158738249517C7007F6D46 /* ToDoTestCase.swift in Sources */,
+				723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */,
+				723DA5C424A3936400B618C4 /* RootScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +349,7 @@
 				72E7BE66249502180064C64E /* ViewController.swift in Sources */,
 				72E7BE7824950FF70064C64E /* TaskViewController.swift in Sources */,
 				72E7BE62249502180064C64E /* AppDelegate.swift in Sources */,
+				720BFA5324A9D18B00691CCD /* Accessibility.swift in Sources */,
 				72E7BE64249502180064C64E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

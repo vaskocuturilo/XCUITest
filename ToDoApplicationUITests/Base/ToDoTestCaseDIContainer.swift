@@ -13,6 +13,7 @@ import XCTest
 /// DescriptionToDoTestCaseDIContainer. This is container.
 final class ToDoTestCaseDIContainer {
     private(set) lazy var application = XCUIApplication()
+    private(set) lazy var screens: ToDoScreens = ToDoScreens(container: self)
     
     
     // MARK: - Init

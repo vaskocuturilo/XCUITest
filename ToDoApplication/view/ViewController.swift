@@ -15,6 +15,7 @@ class ToDoListItem: Object {
     
 }
 
+fileprivate let AccessibilityRoot = Accessibility.Screen.Root.self
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -26,11 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         data = realm.objects(ToDoListItem.self).map({ $0 })
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
+        view.accessibilityIdentifier = AccessibilityRoot.View
         
     }
     
