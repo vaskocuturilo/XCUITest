@@ -2,8 +2,8 @@
 
 ## Test scenario:
 - Create simpler application ToDo list.
-- 
--  
+- Create automation scripts for ToDo list application.
+- Generate report after running automation scripts. 
     
 ## Requirements:
 - Use any *object-oriented language* (Objective-C or Swift).
