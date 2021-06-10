@@ -12,7 +12,6 @@ import XCTest
 class ToDoPageObject {
     let application: XCUIApplication
     
-    
     // MARK: - Init
     init(application: XCUIApplication) {
         self.application = application

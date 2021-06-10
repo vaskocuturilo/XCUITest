@@ -8,7 +8,6 @@
 
 import XCTest
 
-
 /// Test case class.
 class ToDoTestCase: XCTestCase {
     private let container = ToDoTestCaseDIContainer()
@@ -47,22 +46,27 @@ class ToDoTestCase: XCTestCase {
         return container.screens
     }
     
+    // MARK: - Public
     /// Function waitForElementToAppear.
     /// - Parameter element: this is XCUIElemnt.
     /// - Parameter timeout: time for delay.
     /// - Parameter file: this is file parametrs for recordFailure (marked).
     /// - Parameter line: this is line parametrs for recordFailure (marked).
     public func waitForElementToAppear(element: XCUIElement, timeout: TimeInterval = 15,  file: String = #file, line: UInt = #line) {
-        let existsPredicate = NSPredicate(format: "exists == true")
-        
-        expectation(for: existsPredicate,
-                    evaluatedWith: element, handler: nil)
-        
-        waitForExpectations(timeout: timeout) { (error) -> Void in
-            if (error != nil) {
-                let message = "Failed to find \(element) after \(timeout) seconds."
-                self.recordFailure(withDescription: message, inFile: file, atLine: Int(line), expected: true)
-            }
+        let expectation = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "exists == true"),
+            object: element
+        )
+        let result = XCTWaiter().wait(
+            for: [expectation],
+            timeout: timeout
+        )
+        switch result {
+        case .completed:
+            break
+        default:
+            let message = "Failed to find \(element) after \(timeout) seconds."
+            XCTFail(message)
         }
     }
 }

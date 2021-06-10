@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		720BFA5324A9D18B00691CCD /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720BFA5224A9D18B00691CCD /* Accessibility.swift */; };
-		72158738249517C7007F6D46 /* ToDoTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72158737249517C7007F6D46 /* ToDoTestCase.swift */; };
 		7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7215873924951826007F6D46 /* ToDoTestCaseDIContainer.swift */; };
 		721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721ED97A2497E06200058636 /* CheckPreconditions.swift */; };
 		723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C124A392C600B618C4 /* ToDoScreens.swift */; };
 		723DA5C424A3936400B618C4 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C324A3936400B618C4 /* RootScreen.swift */; };
 		725C827C24953FAB0019B34C /* ToDoPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C827B24953FAB0019B34C /* ToDoPageObject.swift */; };
+		7281A313267265C40055CEB1 /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720BFA5224A9D18B00691CCD /* Accessibility.swift */; };
+		7281A31A267266F60055CEB1 /* ToDoTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72158737249517C7007F6D46 /* ToDoTestCase.swift */; };
 		72E7BE62249502180064C64E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE61249502180064C64E /* AppDelegate.swift */; };
 		72E7BE64249502180064C64E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE63249502180064C64E /* SceneDelegate.swift */; };
 		72E7BE66249502180064C64E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E7BE65249502180064C64E /* ViewController.swift */; };
@@ -107,10 +108,8 @@
 		721093742495178E007C94AC /* ToDoApplicationUITests */ = {
 			isa = PBXGroup;
 			children = (
-				723DA5C024A3929900B618C4 /* Screens */,
-				72158736249517B4007F6D46 /* Base */,
 				721093772495178E007C94AC /* Info.plist */,
-				721ED97A2497E06200058636 /* CheckPreconditions.swift */,
+				7281A31D267267100055CEB1 /* TestCases */,
 			);
 			path = ToDoApplicationUITests;
 			sourceTree = "<group>";
@@ -150,6 +149,14 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		7281A31D267267100055CEB1 /* TestCases */ = {
+			isa = PBXGroup;
+			children = (
+				721ED97A2497E06200058636 /* CheckPreconditions.swift */,
+			);
+			path = TestCases;
+			sourceTree = "<group>";
+		};
 		72E7BE55249502180064C64E = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +180,8 @@
 		72E7BE60249502180064C64E /* ToDoApplication */ = {
 			isa = PBXGroup;
 			children = (
+				72158736249517B4007F6D46 /* Base */,
+				723DA5C024A3929900B618C4 /* Screens */,
 				723DA5CA24A396E700B618C4 /* view */,
 				723DA5C924A396D400B618C4 /* utils */,
 				72E7BE61249502180064C64E /* AppDelegate.swift */,
@@ -333,9 +342,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				725C827C24953FAB0019B34C /* ToDoPageObject.swift in Sources */,
+				7281A313267265C40055CEB1 /* Accessibility.swift in Sources */,
+				7281A31A267266F60055CEB1 /* ToDoTestCase.swift in Sources */,
 				7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */,
 				721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */,
-				72158738249517C7007F6D46 /* ToDoTestCase.swift in Sources */,
 				723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */,
 				723DA5C424A3936400B618C4 /* RootScreen.swift in Sources */,
 			);

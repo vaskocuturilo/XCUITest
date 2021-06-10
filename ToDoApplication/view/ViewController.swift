@@ -9,13 +9,13 @@
 import UIKit
 import RealmSwift
 
+fileprivate let AccessibilityRoot = Accessibility.Screen.Root.self
 class ToDoListItem: Object {
     @objc dynamic var  item: String = ""
     @objc dynamic var  date: Date = Date()
     
 }
 
-fileprivate let AccessibilityRoot = Accessibility.Screen.Root.self
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -86,6 +86,5 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         table.reloadData()
     }
-    
 }
 
