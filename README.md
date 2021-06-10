@@ -7,9 +7,8 @@
     
 ## Requirements:
 - Use any *object-oriented language* (Objective-C or Swift).
-- Use any Http client for API requests.
 - Use automation patterns like *PageObject*, *data-driven* tests, etc.
-- Use any testing frameworks (XCTesr). 
+- Use any testing frameworks (XCUITest). 
 - provide code and clear instructions how to run it.
 
 **Note**: please put your code in public repository.
@@ -19,11 +18,9 @@
 
 You will need the following technologies available to try it out:
 * Git
-* XCTest
+* XCUITest
 * Swift 5
 * Xcode 
-* Web browser Chrome
-
 ### Ho w to run
 
 ```.```
