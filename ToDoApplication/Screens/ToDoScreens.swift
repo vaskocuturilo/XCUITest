@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /// Screens.
 final class ToDoScreens {
     private let container: ToDoTestCaseDIContainer
@@ -16,6 +15,6 @@ final class ToDoScreens {
     init(container: ToDoTestCaseDIContainer) {
         self.container = container
     }
-      
-     lazy var rootScreen = RoorScreen(application: container.application)
+    
+    lazy var rootScreen = RoorScreen(application: container.application)
 }
