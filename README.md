@@ -39,9 +39,9 @@ You will need the following technologies available to try it out:
 ```gradle allure:serve```
 
 
-![]() 
+![](https://d.radikal.ru/d30/2106/7c/36b919eddf46.png) 
 
-![]()
+![](https://a.radikal.ru/a15/2106/4a/cab179a01d07.png)
 
 
 
