@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ehR-cu-YMO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ehR-cu-YMO">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +19,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hBf-Ar-6yu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hBf-Ar-6yu" secondAttribute="trailing" id="DBj-IX-kp5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hBf-Ar-6yu" secondAttribute="bottom" id="IB8-M7-60B"/>
                             <constraint firstItem="hBf-Ar-6yu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gne-2b-juk"/>
                             <constraint firstItem="hBf-Ar-6yu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="psO-4c-qat"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="M3C-cC-jZI">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="cZc-6L-USM">
@@ -62,13 +64,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Ob2-bB-jN7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ob2-bB-jN7" firstAttribute="trailing" secondItem="sAO-Fc-Se2" secondAttribute="trailing" constant="16" id="8hH-Sk-x6a"/>
                             <constraint firstItem="sAO-Fc-Se2" firstAttribute="top" secondItem="Ob2-bB-jN7" secondAttribute="top" constant="68" id="XYg-HR-UjD"/>
                             <constraint firstItem="sAO-Fc-Se2" firstAttribute="leading" secondItem="Ob2-bB-jN7" secondAttribute="leading" constant="16" id="dC6-wD-I8w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ob2-bB-jN7"/>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="qlj-tC-xyy" id="jV9-ym-G9k"/>
@@ -99,7 +101,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="IdY-NO-TFk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ni2-sr-y89" firstAttribute="trailing" secondItem="Xte-EZ-kFL" secondAttribute="trailingMargin" id="JZE-qp-whG"/>
                             <constraint firstItem="Ni2-sr-y89" firstAttribute="trailing" secondItem="zT1-Fk-cUt" secondAttribute="trailing" id="Nut-X1-0jS"/>
@@ -108,7 +111,6 @@
                             <constraint firstItem="Ni2-sr-y89" firstAttribute="leading" secondItem="zT1-Fk-cUt" secondAttribute="leading" id="c4k-dU-BvS"/>
                             <constraint firstItem="IdY-NO-TFk" firstAttribute="bottom" secondItem="Ni2-sr-y89" secondAttribute="bottom" constant="484" id="syW-fg-4I7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="IdY-NO-TFk"/>
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="Ni2-sr-y89" id="znM-Dh-71a"/>
@@ -138,4 +140,9 @@
             <point key="canvasLocation" x="-1153" y="-178"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

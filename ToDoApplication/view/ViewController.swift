@@ -17,12 +17,9 @@ class ToDoListItem: Object {
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    
     @IBOutlet var table: UITableView!
     public var item: ToDoListItem?
     private var data = [ToDoListItem]()
-    
     private let realm = try! Realm()
     
     override func viewDidLoad() {
@@ -32,7 +29,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         table.delegate = self
         table.dataSource = self
         view.accessibilityIdentifier = AccessibilityRoot.View
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
