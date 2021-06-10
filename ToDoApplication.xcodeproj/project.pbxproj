@@ -10,6 +10,7 @@
 		720BFA5324A9D18B00691CCD /* Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720BFA5224A9D18B00691CCD /* Accessibility.swift */; };
 		7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7215873924951826007F6D46 /* ToDoTestCaseDIContainer.swift */; };
 		721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721ED97A2497E06200058636 /* CheckPreconditions.swift */; };
+		723C6C1D26728AC300DCA3B6 /* SimpleAddNoteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723C6C1C26728AC300DCA3B6 /* SimpleAddNoteTest.swift */; };
 		723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C124A392C600B618C4 /* ToDoScreens.swift */; };
 		723DA5C424A3936400B618C4 /* RootScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DA5C324A3936400B618C4 /* RootScreen.swift */; };
 		725C827C24953FAB0019B34C /* ToDoPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725C827B24953FAB0019B34C /* ToDoPageObject.swift */; };
@@ -43,6 +44,7 @@
 		72158737249517C7007F6D46 /* ToDoTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTestCase.swift; sourceTree = "<group>"; };
 		7215873924951826007F6D46 /* ToDoTestCaseDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTestCaseDIContainer.swift; sourceTree = "<group>"; };
 		721ED97A2497E06200058636 /* CheckPreconditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPreconditions.swift; sourceTree = "<group>"; };
+		723C6C1C26728AC300DCA3B6 /* SimpleAddNoteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAddNoteTest.swift; sourceTree = "<group>"; };
 		723DA5C124A392C600B618C4 /* ToDoScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreens.swift; sourceTree = "<group>"; };
 		723DA5C324A3936400B618C4 /* RootScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootScreen.swift; sourceTree = "<group>"; };
 		725C827B24953FAB0019B34C /* ToDoPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPageObject.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				721ED97A2497E06200058636 /* CheckPreconditions.swift */,
+				723C6C1C26728AC300DCA3B6 /* SimpleAddNoteTest.swift */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				725C827C24953FAB0019B34C /* ToDoPageObject.swift in Sources */,
 				7281A313267265C40055CEB1 /* Accessibility.swift in Sources */,
 				7281A31A267266F60055CEB1 /* ToDoTestCase.swift in Sources */,
+				723C6C1D26728AC300DCA3B6 /* SimpleAddNoteTest.swift in Sources */,
 				7215873A24951826007F6D46 /* ToDoTestCaseDIContainer.swift in Sources */,
 				721ED97B2497E06200058636 /* CheckPreconditions.swift in Sources */,
 				723DA5C224A392C600B618C4 /* ToDoScreens.swift in Sources */,
