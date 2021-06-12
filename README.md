@@ -23,25 +23,35 @@ You will need the following technologies available to try it out:
 * Xcode 
 ### Ho w to run
 
-```.```
+``` xcodebuild test -workspace ToDoApplication.xcworkspace -scheme ToDoApplication -destination 'platform=iOS Simulator,name=iPhone 8,OS=14.0' -resultBundlePath TestResults```
 
 - [x] ability to run tests for different browsers/os by configuring;
 - [x] ability to run tests for different environments(urls) by configuring/by command-line.
 
-```.``` 
+# xcresults
+A command line tool to extract test summaries & screenshots from Xcode 11 XCResult files.
+
+# Installation
+Download latest version from github releases:
+
+wget https://github.com/eroshenkoam/xcresults/releases/latest/download/xcresults
+
+# And make it executable:
+
+chmod +x xcresults
 
 ### Generate Allure report 
 
-```gradle allure:report```
+```./xcresults export TestResults.xcresult/ outputDirectory```
 
 ### Open Allure report in browser
 
-```gradle allure:serve```
+```allure serve outputDirectory/```
 
 
-![](https://d.radikal.ru/d30/2106/7c/36b919eddf46.png) 
+![](https://d.radikal.ru/d17/2106/4e/ed1a3f25bb9f.png) 
 
-![](https://a.radikal.ru/a15/2106/4a/cab179a01d07.png)
+![](https://d.radikal.ru/d42/2106/38/95f851744068.png)
 
 
 
