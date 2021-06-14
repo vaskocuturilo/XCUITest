@@ -44,6 +44,8 @@ enum Accessibility {
         public enum Edit: AccessibilityEnum {
             // root view
             public static let View = wrapIdentifier("View")
+            public static let TaskField = wrapIdentifier("TaskField")
+            public static let SaveButton = wrapIdentifier("SaveButton")
             public static let DeleteButton = wrapIdentifier("DeleteButton")
         }
     }

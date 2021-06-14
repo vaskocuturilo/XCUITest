@@ -29,6 +29,7 @@ class EditViewController: UIViewController {
         view.accessibilityIdentifier = AccessabilityRoot.View
         
         textField.text = item?.item
+        textField.accessibilityIdentifier = AccessabilityRoot.TaskField
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSaveButton))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))

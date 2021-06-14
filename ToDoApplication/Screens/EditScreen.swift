@@ -15,11 +15,28 @@ class EditScreen: ToDoPageObject {
         return self.application.otherElements[AccessabilityRoot.View]
     }
     
+    public var taskField :XCUIElement {
+        return self.application.textFields[AccessabilityRoot.TaskField]
+    }
+    
     public var deleteButton: XCUIElement {
         return self.application.buttons["Delete"]
     }
     
+    public var saveButton: XCUIElement {
+        return self.application.buttons["Save"]
+    }
+    
     public func tapDeleteButton(){
         deleteButton.tap()
+    }
+    
+    public func editTask(text: String) {
+        taskField.tap()
+        taskField.typeText(text)
+    }
+    
+    public func tapSaveButton() {
+        saveButton.tap()
     }
 }

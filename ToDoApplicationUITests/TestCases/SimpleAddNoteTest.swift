@@ -8,7 +8,6 @@
 
 import XCTest
 
-
 class SimpleAddNoteTest: XCTestCase {
     
     func testSimpleAddNote() throws {
@@ -30,5 +29,24 @@ class SimpleAddNoteTest: XCTestCase {
         app.buttons["Ok"].tap()
     }
     
+    func testSimpleEditNote() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.buttons["Add"].tap()
+        app.textFields.element.tap()
+        app.textFields.element.typeText("Simple text")
+        app.buttons["Save"].tap()
+        
+        app.tables.children(matching: .cell).staticTexts["Simple text"].tap()
+        sleep(2)
+        app.textFields.element.tap()
+        app.textFields.element.typeText(" for testing edit tests!")
+        app.buttons["Save"].tap()
+        
+        app.tables.children(matching: .cell).staticTexts["Simple text for testing edit tests!"].tap()
+        app.buttons["Delete"].tap()
+        app.buttons["Ok"].tap()
+    }
 }
 
