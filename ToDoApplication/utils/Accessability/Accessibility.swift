@@ -22,16 +22,21 @@ fileprivate extension AccessibilityEnum {
 enum Accessibility {
     /// InputBar тулбар над клавиатурой с кнопкой Готово
     enum InputBar: AccessibilityEnum {
-        static let View = wrapIdentifier("View")
-        static let DoneButton = wrapIdentifier("DoneButton")
+        public static let View = wrapIdentifier("View")
     }
     
     /// Экраны
     enum Screen {
         enum Root: AccessibilityEnum {
             // Кореневая вьюха модуля
-            static let View = wrapIdentifier("View")
-            
+            public static let View = wrapIdentifier("View")
+        }
+        
+        public enum Task: AccessibilityEnum {
+            // root view
+            public static let View = wrapIdentifier("View")
+            public static let TaskField = wrapIdentifier("TaskField")
+            public static let SaveButton = wrapIdentifier("SaveButton")
         }
     }
 }

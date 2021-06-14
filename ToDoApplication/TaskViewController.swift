@@ -9,9 +9,8 @@
 import UIKit
 import RealmSwift
 
+fileprivate let AccessabilityRoot = Accessibility.Screen.Task.self
 class TaskViewController: UIViewController, UITextFieldDelegate {
-    
-    
     @IBOutlet var textFiled:UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     
@@ -20,9 +19,10 @@ class TaskViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.accessibilityIdentifier = AccessabilityRoot.View
         textFiled.becomeFirstResponder()
         textFiled.delegate = self
+        textFiled.accessibilityIdentifier = AccessabilityRoot.TaskField
         datePicker.setDate(Date(), animated: true)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSaveButton))
