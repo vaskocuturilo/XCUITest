@@ -69,4 +69,16 @@ class ToDoTestCase: XCTestCase {
             XCTFail(message)
         }
     }
+    
+    public func tapAlertButtonIfExists(named: String) {
+            let sheetButton = application.sheets.buttons[named]
+            if sheetButton.exists {
+                sheetButton.tap()
+            }
+            
+            let alertButton = application.alerts.buttons[named]
+            if alertButton.exists {
+                alertButton.tap()
+            }
+        }
 }

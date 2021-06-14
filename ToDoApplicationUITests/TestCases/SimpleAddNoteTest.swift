@@ -10,6 +10,7 @@ import XCTest
 
 
 class SimpleAddNoteTest: XCTestCase {
+    
     func testSimpleAddNote() throws {
         let app = XCUIApplication()
         app.launch()
@@ -19,4 +20,15 @@ class SimpleAddNoteTest: XCTestCase {
         app.textFields.element.typeText("Simple text")
         app.buttons["Save"].tap()
     }
+    
+    func testSimpleDeleteNote() throws {
+        let app = XCUIApplication()
+        app.launch()
+        
+        app.tables.children(matching: .cell).staticTexts["Simple text"].tap()
+        app.buttons["Delete"].tap()
+        app.buttons["Ok"].tap()
+    }
+    
 }
+

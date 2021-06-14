@@ -30,6 +30,8 @@ enum Accessibility {
         enum Root: AccessibilityEnum {
             // Кореневая вьюха модуля
             public static let View = wrapIdentifier("View")
+            public static let TaskTable = wrapIdentifier("TaskTable")
+            public static let TaskCell = wrapIdentifier("TaskCell")
         }
         
         public enum Task: AccessibilityEnum {
@@ -37,6 +39,12 @@ enum Accessibility {
             public static let View = wrapIdentifier("View")
             public static let TaskField = wrapIdentifier("TaskField")
             public static let SaveButton = wrapIdentifier("SaveButton")
+        }
+        
+        public enum Edit: AccessibilityEnum {
+            // root view
+            public static let View = wrapIdentifier("View")
+            public static let DeleteButton = wrapIdentifier("DeleteButton")
         }
     }
 }

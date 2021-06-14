@@ -32,18 +32,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tableView.accessibilityIdentifier = AccessibilityRoot.TaskTable
         return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.row].item
+        cell.isAccessibilityElement = true
+        cell.accessibilityIdentifier = AccessibilityRoot.TaskCell
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let item = data[indexPath.row]
         
         guard let viewController = storyboard?.instantiateViewController(identifier: "edit") as? EditViewController else {
