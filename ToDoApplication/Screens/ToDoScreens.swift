@@ -18,4 +18,5 @@ final class ToDoScreens {
     
     lazy var rootScreen = RoorScreen(application: container.application)
     lazy var taskScreen = TaskScreen(application: container.application)
+    lazy var editScreen = EditScreen(application: container.application)
 }

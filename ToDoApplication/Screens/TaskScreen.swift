@@ -12,7 +12,7 @@ import XCTest
 fileprivate let AccessabilityRoot = Accessibility.Screen.Task.self
 class TaskScreen: ToDoPageObject {
     override var root: XCUIElement {
-        return self.application.otherElements[Accessibility.Screen.Task.View]
+        return self.application.otherElements[AccessabilityRoot.View]
     }
     
     public var taskField :XCUIElement {
