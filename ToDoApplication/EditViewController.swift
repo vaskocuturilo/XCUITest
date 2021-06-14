@@ -30,6 +30,7 @@ class EditViewController: UIViewController {
         
         textField.text = item?.item
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapSaveButton))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
     }
     @objc func didTapDelete(){
@@ -57,6 +58,24 @@ class EditViewController: UIViewController {
         }))
         
         present(refreshAlert, animated: true, completion: nil)
+    }
+    
+    @objc func didTapSaveButton(){
+        guard let myItem = self.item else {
+            return
+        }
+        if let text = textField.text, !text.isEmpty {
+            realm.beginWrite()
+            self.realm.delete(myItem)
+            let newItem = ToDoListItem()
+            newItem.item = text
+            realm.add(newItem)
+            try! realm.commitWrite()
+            self.deletionHandler?()
+            navigationController?.popToRootViewController(animated: true)
+        } else {
+            
+        }
     }
 }
 
