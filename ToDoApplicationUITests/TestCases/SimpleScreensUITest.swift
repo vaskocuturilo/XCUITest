@@ -35,4 +35,30 @@ class SimpleScreensUITest: ToDoTestCase {
         let message = application.staticTexts["New post for test"]
         XCTAssertFalse(message.waitForExistence(timeout: 5))
     }
+    
+    func testSimpleEditTaskScreensUI() throws {
+        waitForElementToAppear(element: screens.rootScreen.root)
+        screens.rootScreen.tapAddButton()
+        
+        waitForElementToAppear(element: screens.taskScreen.root)
+        screens.taskScreen.addNewTask(text: "New post for test")
+        screens.taskScreen.tapSaveButton()
+        
+        waitForElementToAppear(element: screens.rootScreen.root)
+        screens.rootScreen.pickTask(named: "New post for test")
+        
+        waitForElementToAppear(element: screens.editScreen.root)
+        screens.editScreen.editTask(text: " update.")
+        screens.editScreen.tapSaveButton()
+        
+        waitForElementToAppear(element: screens.rootScreen.root)
+        screens.rootScreen.pickTask(named: "New post for test update.")
+        
+        waitForElementToAppear(element: screens.editScreen.root)
+        screens.editScreen.tapDeleteButton()
+        tapAlertButtonIfExists(named: "Ok")
+        
+        let message = application.staticTexts["New post for test update."]
+        XCTAssertFalse(message.waitForExistence(timeout: 5))
+    }
 }
